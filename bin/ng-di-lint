@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+var program = require('commander'),
+  fs = require('fs'),
+  diLint = require('../main');
+
+program
+  .version(require('../package.json').version)
+  .usage('<infile> <outfile>')
+  // .option('-d, --dynamic', 'Use dynamic mode')
+  .parse(process.argv);
+
+if (program.args.length !== 0 && program.args.length !== 1) {
+  console.error('ng-di-lint should be called with an input file, or no arguments if using stdio');
+  process.exit(1);
+}
+
+if (program.args.length === 1) {
+  var infile = program.args[0];
+
+  try {
+    var content = fs.readFileSync(infile, 'utf-8');
+  } catch (e) {
+    console.error('Error opening: ' + infile);
+    process.exit(1);
+  }
+  diLint.lint(content, program);
+
+
+} else {
+  // else use stdio
+  var buffer = '';
+
+  process.stdin.setEncoding('utf8');
+  process.stdin.resume();
+
+  process.stdin.on('data', function (chunk) {
+    buffer += chunk;
+  });
+
+  process.stdin.on('end', function() {
+    lint.lint(buffer, program);
+  });
+}

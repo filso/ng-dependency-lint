@@ -1,6 +1,6 @@
 {
   "name": "ng-di-lint",
-  "description": "AngularJS Dependency Linter",
+  "description": "AngularJS Dependency Injection linter",
   "version": "0.1.0",
   "author": "Filip Sobczak",
   "license": "MIT",

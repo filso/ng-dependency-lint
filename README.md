@@ -1,6 +1,7 @@
-ng-di-lint
+# ng-di-lint [![Build Status](https://travis-ci.org/filso/ng-di-lint.svg?branch=master)](https://travis-ci.org/filso/ng-di-lint)
+
 --------
-#### remove unused dependency injections automatically 
+#### Remove unused dependency injections automatically 
 
 Removing unused dependency injections when you use hundreds of components can be tedious task. This script aims to automate the process for you.
 
@@ -43,7 +44,7 @@ asda
 
 FAQ
 ---------------
-#####1. Does this plugin work with string array dependency syntax?
+#####1. Does it work with string array dependency syntax?
 
 No, I think it's a bad idea to annotate dependencies manually, so ng-di-lint doesn't support it. 
 You can use this free awesome DI annotator after your code is processed by ng-di-lint: https://github.com/olov/ng-annotate

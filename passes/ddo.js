@@ -1,6 +1,6 @@
 // mark directive description objects
 
-var annotateInjectable = require('../lib/annotate-injectable');
+var lint = require('../lib/lint');
 var deepApply = require('../lib/deep-apply');
 
 var ddoAnnotatorPass = module.exports = {};
@@ -39,7 +39,7 @@ ddoAnnotatorPass.run = function (ast, info) {
           "type": "FunctionExpression"
         }
       }], function (controllerChunk) {
-        annotateInjectable(directiveChunk.arguments[0].value, controllerChunk.value);
+        lint(directiveChunk.arguments[0].value, controllerChunk.value);
       });
     });
   });

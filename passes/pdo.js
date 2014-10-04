@@ -1,5 +1,5 @@
 
-var annotateInjectable = require('../lib/annotate-injectable');
+var lint = require('../lib/lint');
 var deepApply = require('../lib/deep-apply');
 
 // mark provider description objects
@@ -46,7 +46,7 @@ pdoAnnotatorPass.run = function (ast, info) {
         }
       }
     }], function (pdoChunk) {
-      pdoChunk.expression.right = annotateInjectable('provider', pdoChunk.expression.right);
+      pdoChunk.expression.right = lint('provider', pdoChunk.expression.right);
     });
 
     // PDO annotations defined by object
@@ -65,7 +65,7 @@ pdoAnnotatorPass.run = function (ast, info) {
             "type": "FunctionExpression"
           }
         }], function (propertyChunk) {
-          propertyChunk.value = annotateInjectable('ident', propertyChunk.value);
+          propertyChunk.value = lint('ident', propertyChunk.value);
         });
       });
     });

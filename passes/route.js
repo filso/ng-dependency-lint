@@ -1,6 +1,6 @@
 // mark route objects
 
-var annotateInjectable = require('../lib/annotate-injectable');
+var lint = require('../lib/lint');
 var deepApply = require('../lib/deep-apply');
 
 var routeAnnotatorPass = module.exports = {};
@@ -48,7 +48,7 @@ routeAnnotatorPass.run = function (ast, info) {
           "type": "FunctionExpression"
         }
       }], function (controllerChunk) {
-        controllerChunk.value = annotateInjectable('controller route', controllerChunk.value);
+        controllerChunk.value = lint('controller route', controllerChunk.value);
       });
 
       deepApply(whenChunk, [{
@@ -70,7 +70,7 @@ routeAnnotatorPass.run = function (ast, info) {
             "type": "FunctionExpression"
           }
         }], function (resolveIdentifierChunk) {
-          resolveIdentifierChunk.value = annotateInjectable(resolveIdentifierChunk.value);
+          resolveIdentifierChunk.value = lint(resolveIdentifierChunk.value);
         });
       });
     });

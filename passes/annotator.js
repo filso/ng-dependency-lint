@@ -1,6 +1,6 @@
 // annotate "ngModule"
 
-var annotateInjectable = require('../lib/annotate-injectable');
+var lint = require('../lib/lint');
 var annotatorPass = module.exports = require('astral-pass')();
 
 var deepCompare = require('../lib/deep-compare');
@@ -30,5 +30,5 @@ annotatorPass.
       return;
     }
 
-    annotateInjectable(chunk.arguments[0].value, chunk.arguments[argIndex]);
+    lint(chunk.arguments[0].value, chunk.arguments[argIndex]);
   });

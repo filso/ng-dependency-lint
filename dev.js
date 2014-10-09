@@ -12,7 +12,7 @@ var annotated = annotate(function() {
   angular.module('myMod', []).
   directive('myDir', function() {
     return {
-      controller: function($scope, bleble, fs) {
+      controller: function($scope, bleble, fs, hasdh) {
         $scope.test = true;
         !testVar;
         b / bleble + a;

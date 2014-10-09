@@ -24,14 +24,26 @@ injected dependency list keep this metadata accurate.
 
 ### How to use ng-di-lint
 
-You can use this script in 2 modes:
+
+#### Build systems
+
+- [gulp-ng-di-lint](https://github.com/filso/gulp-ng-di-lint)
+
+#### Standalone
+
+You can also use this ng-di-lint as a standalone tool, to do that, install via npm:
+```
+npm install -g ng-di-lint
+```
+
+Then you can use this script in 2 modes:
 ##### 1. Print mode
 You can use it similarly to `lint` tool - any unused dependencies will be printed on gulp / grunt console,
 leaving you to update the code.
 
 To run this, 
 ```javascript
-asfasf
+ng-di-lint somefile.js
 ```
 
 ##### 2. Update mode
@@ -39,7 +51,7 @@ The code can be automatically updated - unused dependencies can be removed from 
 
 To run this
 ```javascript
-asda
+ng-di-lint -u somefile.js
 ```
 
 FAQ

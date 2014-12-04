@@ -4,7 +4,7 @@ var assert = require('should');
 var stringifyFunctionBody = require('./test/util').stringifyFunctionBody;
 var annotate = function(arg) {
   return require('./main').lint(
-    stringifyFunctionBody(arg));
+    stringifyFunctionBody(arg), {removeUnused: true});
 };
 
 

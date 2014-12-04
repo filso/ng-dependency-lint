@@ -5,6 +5,8 @@ var esprima = require('esprima'),
 require('./lint')(astral);
 exports.lint = function(inputCode, options) {
   global.inputCode = inputCode;
+  global.outputCode = inputCode;
+  global.options = options;
 
   var ast = esprima.parse(inputCode, {
     tolerant: true,
@@ -12,5 +14,9 @@ exports.lint = function(inputCode, options) {
     tokens: true
   });
 
+
   astral.run(ast);
+
+  return global.outputCode;
+
 };

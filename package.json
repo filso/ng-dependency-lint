@@ -1,5 +1,5 @@
 {
-  "name": "ng-di-lint",
+  "name": "ng-d-lint",
   "description": "AngularJS Dependency Injection linter",
   "version": "0.1.0",
   "author": "Filip Sobczak",
@@ -28,10 +28,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/filso/ng-di-lint"
+    "url": "git://github.com/filso/ng-dependency-lint"
   },
   "bin": {
-    "ng-di-lint": "./bin/ng-di-lint"
+    "ng-dependency-lint": "./bin/ng-dependency-lint"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --globals angular,require"

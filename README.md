@@ -1,4 +1,4 @@
-# ng-di-lint [![Build Status](https://travis-ci.org/filso/ng-di-lint.svg?branch=master)](https://travis-ci.org/filso/ng-di-lint)
+# ng-dependency-lint [![Build Status](https://travis-ci.org/filso/ng-dependency-lint.svg?branch=master)](https://travis-ci.org/filso/ng-dependency-lint)
 
 --------
 #### Remove unused dependency injections automatically 
@@ -22,18 +22,18 @@ Therefore in some situations removing unused dependency injections might induce 
 AngularJS dependencies contain potential metadata that can be used by 3rd party plugins / software. Cleaning up
 injected dependency list keep this metadata accurate.
 
-### How to use ng-di-lint
+### How to use ng-dependency-lint
 
 
 #### Build systems
 
-- [gulp-ng-di-lint](https://github.com/filso/gulp-ng-di-lint)
+- [gulp-ng-dependency-lint](https://github.com/filso/gulp-ng-dependency-lint)
 
 #### Standalone
 
-You can also use this ng-di-lint as a standalone tool, to do that, install via npm:
+You can also use this ng-dependency-lint as a standalone tool, to do that, install via npm:
 ```
-npm install -g ng-di-lint
+npm install -g ng-dependency-lint
 ```
 
 Then you can use this script in 2 modes:
@@ -43,7 +43,7 @@ leaving you to update the code.
 
 To run this, 
 ```javascript
-ng-di-lint somefile.js
+ng-dependency-lint somefile.js
 ```
 
 ##### 2. Update mode
@@ -51,12 +51,12 @@ The code can be automatically updated - unused dependencies can be removed from 
 
 To run this
 ```javascript
-ng-di-lint -u somefile.js
+ng-dependency-lint -u somefile.js
 ```
 
 FAQ
 ---------------
 #####1. Does it work with string array dependency syntax?
 
-No, I think it's a bad idea to annotate dependencies manually, so ng-di-lint doesn't support it. 
-You can use this free awesome DI annotator after your code is processed by ng-di-lint: https://github.com/olov/ng-annotate
+No, I think it's a bad idea to annotate dependencies manually, so ng-dependency-lint doesn't support it. 
+You can use this free awesome DI annotator after your code is processed by ng-dependency-lint: https://github.com/olov/ng-annotate

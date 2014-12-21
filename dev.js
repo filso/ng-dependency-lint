@@ -4,7 +4,8 @@ var assert = require('should');
 var stringifyFunctionBody = require('./test/util').stringifyFunctionBody;
 var annotate = function(arg) {
   return require('./main').lint(
-    stringifyFunctionBody(arg), {removeUnused: true});
+    stringifyFunctionBody(arg), {removeUnused: true, separateWithNewline: true});
+  // add opt: indent lines
 };
 
 
@@ -30,3 +31,5 @@ var annotated = annotate(function() {
     };
   });
 });
+
+console.log('\n', '\n', annotated);

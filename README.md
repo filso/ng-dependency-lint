@@ -2,7 +2,6 @@
 
 #### Warning: depracated
 I'm abandoning this project for the lack of time, and because now there's something similar, but better:
-https://www.npmjs.com/package/eslint-plugin-angular
 https://github.com/Gillespie59/eslint-plugin-angular/blob/master/docs/di-unused.md
 
 The only feature that's missing there is automatic removal of injected dependencies, but I guess one could add this feature! 

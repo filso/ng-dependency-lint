@@ -1,7 +1,7 @@
 # ng-dependency-lint [![Build Status](https://travis-ci.org/filso/ng-dependency-lint.svg?branch=master)](https://travis-ci.org/filso/ng-dependency-lint)
 
 #### Warning: depracated
-I'm abandoning this project for the lack of time, and because there's something similar, but better now:
+I'm abandoning this project for the lack of time, and because now there's something similar, but better:
 https://www.npmjs.com/package/eslint-plugin-angular
 
 The only feature that's missing there is automatic removal of injected dependencies, but I guess one could add this feature! 
